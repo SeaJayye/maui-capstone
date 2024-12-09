@@ -1,9 +1,18 @@
-namespace maui_capstone;
+using maui_capstone.ViewModels;
 
-public partial class TimerCreate : ContentPage
+namespace maui_capstone
 {
-    public TimerCreate()
+    public partial class TimerCreate : ContentPage
     {
-        InitializeComponent();
+        public TimerCreate()
+        {
+            InitializeComponent();
+            BindingContext = new MainViewModel();
+        }
+
+        private async void OnBackClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
     }
 }

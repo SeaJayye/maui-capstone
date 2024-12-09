@@ -5,6 +5,14 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Timer Creation Page" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="Timer Name" Text="{Binding NewTimerName}" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="-" Command="{Binding DecreaseDurationCommand}" />
+                <Label Text="{Binding NewTimerDuration}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                <Button Text="+" Command="{Binding IncreaseDurationCommand}" />
+            </StackLayout>
+            <Button Text="Add Timer" Command="{Binding AddTimerCommand}" />
+            <Button Text="Back" Clicked="OnBackClicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

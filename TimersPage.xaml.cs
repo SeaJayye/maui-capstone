@@ -1,9 +1,18 @@
-namespace maui_capstone;
+using maui_capstone.ViewModels;
 
-public partial class TimerPage : ContentPage
+namespace maui_capstone
 {
-    public TimerPage()
+    public partial class TimerPage : ContentPage
     {
-        InitializeComponent();
+        public TimerPage()
+        {
+            InitializeComponent();
+            BindingContext = new MainViewModel();
+        }
+
+        private async void OnCreateTimerClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TimerCreate());
+        }
     }
 }

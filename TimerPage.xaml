@@ -5,6 +5,20 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Timers Page" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Create Timer" Clicked="OnCreateTimerClicked" />
+            <ListView ItemsSource="{Binding Timers}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding Duration}" />
+                                <Label Text="{Binding EndTime}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
