@@ -11,7 +11,7 @@
     <Color x:Key="PrimaryText">#434343</Color>
     <Color x:Key="Secondary">#FA812F</Color>
     <Color x:Key="SecondaryLight">#FAB12F</Color>
-    <Color x:Key="SecondaryText">#343434</Color>
+    <Color x:Key="SecondaryText">#434343</Color>
     <Color x:Key="Tertiary">#434343</Color>
     <Color x:Key="TertiaryLight">#636363</Color>
     <Color x:Key="TertiaryText">#F8F8F8</Color>

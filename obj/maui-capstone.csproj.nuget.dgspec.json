@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\SeaJay\\source\\repos\\maui-capstone\\maui-capstone.csproj": {}
+    "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\maui-capstone.csproj": {}
   },
   "projects": {
-    "c:\\Users\\SeaJay\\source\\repos\\maui-capstone\\maui-capstone.csproj": {
+    "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\maui-capstone.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\SeaJay\\source\\repos\\maui-capstone\\maui-capstone.csproj",
+        "projectUniqueName": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\maui-capstone.csproj",
         "projectName": "maui-capstone",
-        "projectPath": "c:\\Users\\SeaJay\\source\\repos\\maui-capstone\\maui-capstone.csproj",
+        "projectPath": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\maui-capstone.csproj",
         "packagesPath": "C:\\Users\\SeaJay\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\SeaJay\\source\\repos\\maui-capstone\\obj\\",
+        "outputPath": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

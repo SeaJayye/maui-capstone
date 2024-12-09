@@ -24,9 +24,15 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    
-
+                
                 </Grid>
+        </ScrollView>
+        
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="10">
+                <Label Text="Whats cooking, chef?" HorizontalTextAlignment="Center" FontSize="24" FontAttributes="Bold" Margin="0,0,0,10"/>
+                <Label Text="Active timers:" HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
         </ScrollView>
     </Grid>
         

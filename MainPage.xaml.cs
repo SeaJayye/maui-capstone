@@ -5,8 +5,7 @@
 
         public MainPage()
         {
-            int i = 0;
-            Console.WriteLine(i);
+            InitializeComponent();
         }
 
     }
