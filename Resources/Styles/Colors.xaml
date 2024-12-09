@@ -19,7 +19,7 @@
     <Color x:Key="White">#F8F8F8</Color>
     <Color x:Key="Black">#101010</Color>
 
-    <!-- Deprecated Colors -->
+    <!-- Deprecated Colors, Seeing pink means deprecated color is being used -->
     <Color x:Key="PrimaryDarkText">#FF00FF</Color>
     <Color x:Key="SecondaryDarkText">#FF00FF</Color>
     <Color x:Key="TertiaryDarkText">#FF00FF</Color>
