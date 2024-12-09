@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="maui_capstone.MainPage"
-             Title="Home">
+             Title="Home"
+             BackgroundColor="#F8F8F8">
 
     <Grid>
         <!-- RowDefinitions to define the height of each row (half and half) -->
@@ -28,12 +29,14 @@
                 </Grid>
         </ScrollView>
         
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout Padding="10">
-                <Label Text="Whats cooking, chef?" HorizontalTextAlignment="Center" FontSize="24" FontAttributes="Bold" Margin="0,0,0,10"/>
-                <Label Text="Active timers:" HorizontalTextAlignment="Center"/>
-            </VerticalStackLayout>
-        </ScrollView>
+        <Grid Grid.Row="1">
+                <ScrollView>
+                    <VerticalStackLayout Padding="10">
+                        <Label Text="Whats cooking, chef?" HorizontalTextAlignment="Center" FontSize="24" FontAttributes="Bold" Margin="0,0,0,10"/>
+                        <Label Text="Active timers:" HorizontalTextAlignment="Center"/>
+                    </VerticalStackLayout>
+                </ScrollView>
+        </Grid>
     </Grid>
         
 </ContentPage>

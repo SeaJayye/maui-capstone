@@ -19,6 +19,16 @@
     <Color x:Key="White">#F8F8F8</Color>
     <Color x:Key="Black">#101010</Color>
 
+    <!-- Deprecated Colors -->
+    <Color x:Key="PrimaryDarkText">#FF00FF</Color>
+    <Color x:Key="SecondaryDarkText">#FF00FF</Color>
+    <Color x:Key="TertiaryDarkText">#FF00FF</Color>
+    <Color x:Key="MidnightBlue">#FF00FF</Color>
+    <Color x:Key="OffBlack">#FF00FF</Color>
+    <Color x:Key="OffWhite">#FF00FF</Color>
+    <Color x:Key="Magenta">#FF00FF</Color>
+
+
     <Color x:Key="Gray100">#E1E1E1</Color>
     <Color x:Key="Gray200">#C8C8C8</Color>
     <Color x:Key="Gray300">#ACACAC</Color>
