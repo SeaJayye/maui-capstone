@@ -1,14 +1,14 @@
 ﻿<?xml version = "1.0" encoding = "UTF-8" ?>
-<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:maui_capstone"
              x:Class="maui_capstone.App">
-    <!-- defines the route for the timers page -->
-    <ShellItem Route="TimersPage" Title="Timers">
-        <ShellContent ContentTemplate="{DataTemplate local:TimersPage}"/>
-    </ShellItem>
-    <!-- Defines the route for the timer creation page -->
-    <ShellItem Route="CreateTimers" Title="TimerCreation">
-        <ShellContent ContentTemplate="{DataTemplate local:TimerCreation}"/>
-    </ShellItem>
-</Shell>
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

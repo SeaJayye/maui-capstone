@@ -6,10 +6,13 @@
     xmlns:local="clr-namespace:maui_capstone"
     Shell.FlyoutBehavior="Disabled"
     Title="maui_capstone">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <!-- Page for timer display -->
+    <ShellItem Route="TimerPage" Title="Timers">
+        <ShellContent ContentTemplate="{DataTemplate local:TimerPage}"/>
+    </ShellItem>
+    <!-- Page for timer creation -->
+    <ShellItem Route="TimerCreate" Title="TimerCreate">
+        <ShellContent ContentTemplate="{DataTemplate local:TimerCreate}"/>
+    </ShellItem>
 
 </Shell>
