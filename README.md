@@ -60,11 +60,21 @@
 ## Installation and Setup
 
 ### Prerequisites
+
     - Visual Studio 2022 or later with .NET MAUI installed
     - Android emulator or other testing device
     - .NET 6 SDK or higher
 
 ### Steps to Install
+
+    1. Clone the repository
+    2. Open the project in Visual Studios
+    3. Restore dependencies using:
+        -dotnet restore
+    4. Choose a target device or emulator in Visual Studios
+    5. Run the app using:
+        -dotnet build
+        -dotnet run
 
 
 
