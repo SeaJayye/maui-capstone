@@ -146,7 +146,7 @@
 
     - Ensures that all timers can be viewed easily
 
-3. 
+3. Typography
 
     - Headers use bold large fonts to grab attention
 
