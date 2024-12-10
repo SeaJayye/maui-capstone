@@ -105,7 +105,15 @@
 
     - Handles app initializations, including fonts, styles and debugging
 
-5. *Resources/Styles/Colors.xaml and Styles.xaml*:
+5. *TimerCreate.xaml.cs*:
+
+    - Allows the user to manage the timers and handeling the logics
+
+6. *TimerViewmodel.cs*:
+
+    -  Manages a collection of timers and their properties in a structured and observable way
+
+6. *Resources/Styles/Colors.xaml and Styles.xaml*:
     - Defines visual properties for a consisten and professional appearence
 
 ## Usage Instruction
