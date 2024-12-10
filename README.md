@@ -1,2 +1,45 @@
-# maui-capstone
- Functional application using .NET MAUI, focusing on core development principles such as MVVM, API consumption, and SQLite database integration.
+<h1 align="center">Don't Burn it! </h1>
+
+## Table of Contents
+1. [Features](#features)
+2. [Development Stack](#development-stack)
+3. [Installation and Setup](#installation-and-setup)
+4. [App Structure](#app-structure)
+5. [Usage Instruction](#usage-instruction)
+6. [UI Details](#ui-details)
+7. [Future possible upgrades](#future-possible-upgrades)
+8. [Screenshots](#screenshots)
+
+## Features
+
+### Core Functionalities of this program
+- **Multi-Timer Support**:
+
+    - Have multiple timers running at the same time for different dishes
+    
+    - Active timers are displayed and have a scollable layout
+- **Two-Page App layout**:
+
+    - Main page is for viewing all the active timers
+    - Timer detail page is the page for detailed timer information
+
+
+
+
+## Development Stack
+
+## Installation and Setup
+
+## App Structure
+
+## Usage Instruction
+
+## UI Details
+
+## Future possible upgrades
+
+## Screenshots
+
+
+
+
