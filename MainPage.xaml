@@ -3,40 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="maui_capstone.MainPage"
              Title="Home"
-             BackgroundColor="#F8F8F8">
+             BackgroundColor="{StaticResource White}">
 
     <Grid>
         <!-- RowDefinitions to define the height of each row (half and half) -->
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>            
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!-- ScrollView to display timer containers. -->
         <ScrollView Grid.Row="0">
-                <Grid>
-                    <!-- Grid Definitions to define the width of each column and row (Horz 50/50 and Vert auto) -->
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
+            <Grid>
+                <!-- Grid Definitions to define the width of each column and row (Horz 50/50 and Vert auto) -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-                
-                </Grid>
+
+            </Grid>
         </ScrollView>
-        
-        <Grid Grid.Row="1">
+
+        <Frame HasShadow="True" Grid.Row="1" CornerRadius="0" BackgroundColor="{StaticResource PrimaryLight}">
+            <Grid>
                 <ScrollView>
                     <VerticalStackLayout Padding="10">
-                        <Label Text="Whats cooking, chef?" HorizontalTextAlignment="Center" FontSize="24" FontAttributes="Bold" Margin="0,0,0,10"/>
-                        <Label Text="Active timers:" HorizontalTextAlignment="Center"/>
+                        <Label Text="Whats cooking, Chef ?" HorizontalTextAlignment="Center" FontSize="24" FontAttributes="Bold" Margin="0,0,0,10" TextColor="{StaticResource Secondary}"/>
+                        <Label Text="Active timers:" HorizontalTextAlignment="Center" FontSize="18" TextColor="{StaticResource SecondaryLight}" FontAttributes="Bold"/>
+                        
                     </VerticalStackLayout>
                 </ScrollView>
-        </Grid>
+            </Grid>
+        </Frame>
     </Grid>
-        
 </ContentPage>

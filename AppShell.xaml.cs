@@ -6,5 +6,11 @@
         {
             InitializeComponent();
         }
+
+        private async void NavToTimerCreation(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(TimerCreate));
+        }
+
     }
 }
