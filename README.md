@@ -49,6 +49,14 @@
 
 ## Development Stack
 
+1. **.NET MAUI**: A cross-platform framework for building apps
+2. **XAML**: XML-based language for defining user interfaces
+3. **C#**: Language of coding, handles application logistics
+4. **Custom Resource Dictionaries**:
+    
+    - *Colors.xaml* is for defining a consisten color palette
+    - *Styles.xaml* for reusable styles and formatting across the app 
+
 ## Installation and Setup
 
 ## App Structure
