@@ -91,6 +91,18 @@
 
 ## Usage Instruction
 
+1. Home Page Overview:
+    - The home page greets the user with the message: "What's cooking, chef?"
+    - Active timers will be displayed in a scrollable grid
+2. Timer Interaction:
+    - You can add timers for different dishes you wish to cook
+    - Can stop all timers at once 
+    - Have multiple timers running at once
+    - Manage timers in many different ways
+3. Grid Layout:
+    - The top half of the screen is reserved for timers
+    - the bottom sections provides information about active timers
+
 ## UI Details
 
 ## Future possible upgrades
