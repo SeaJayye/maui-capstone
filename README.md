@@ -18,6 +18,12 @@
     - Have multiple timers running at the same time for different dishes
     
     - Active timers are displayed and have a scollable layout
+- **Two-Page App layout**:
+
+    - Main page is for viewing all the active timers
+    - Timer detail page is the page for detailed timer information
+
+
 
 
 ## Development Stack
