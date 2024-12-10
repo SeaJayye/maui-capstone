@@ -12,6 +12,11 @@
 
 ## Features
 
+### Core Functionalities of this program
+- **Multi-Timer Support**:
+    -Have multiple timers running at the same time for different dishes
+    
+
 ## Development Stack
 
 ## Installation and Setup
