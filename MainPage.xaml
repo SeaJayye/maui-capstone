@@ -43,6 +43,7 @@
                     </Frame>
                     
                 </VerticalStackLayout>
+                
             </Grid>
         </ScrollView>
 
@@ -57,7 +58,7 @@
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <Frame BackgroundColor="{StaticResource SecondaryLight}" CornerRadius="10" Padding="10" Margin="5">
-                                        <Label Text="{Binding TimerName}" FontSize="16" TextColor="{StaticResource Secondary}" />
+                                        <Label Text="{Binding TimerName}" FontSize="16" TextColor="{StaticResource Secondary}"/>
                                     </Frame>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
