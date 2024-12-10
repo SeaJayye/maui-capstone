@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("maui-capstone")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+213b7df9e9969b4f4ba4c3bd2b013e81e55a145b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+3b65a372eb5b0545b802affc8e19c30c2c4c33e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("maui-capstone")]
 [assembly: System.Reflection.AssemblyTitleAttribute("maui-capstone")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

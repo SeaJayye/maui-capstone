@@ -14,6 +14,7 @@
                             <Label Text="{Binding RemainingTime, StringFormat='{}{0:hh\\:mm\\:ss}'}" />
                             <Button Text="+" Clicked="OnIncreaseTimeClicked" />
                             <Button Text="-" Clicked="OnDecreaseTimeClicked" />
+                            <Button Text="Update Name" Clicked="OnUpdateTimerNameClicked" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

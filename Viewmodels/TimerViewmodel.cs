@@ -32,6 +32,11 @@ public class TimersViewModel
     {
         ActiveTimers.Add(new TimerModel { TimerName = timerName, RemainingTime = initialTime });
     }
+
+    public void UpdateTimerName(TimerModel timer, string newName)
+    {
+        timer.TimerName = newName;
+    }
 }
 
 public class TimerModel : INotifyPropertyChanged
