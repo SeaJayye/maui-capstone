@@ -11,6 +11,7 @@ namespace maui_capstone
             BindingContext = viewModel;
         }
 
+        // Method to increase the remaining time of a timer by 1 minute
         private void OnIncreaseTimeClicked(object sender, EventArgs e)
         {
             var button = sender as Button;
@@ -18,6 +19,7 @@ namespace maui_capstone
             viewModel.IncreaseTime(timer, TimeSpan.FromMinutes(1));
         }
 
+        // Method to decrease the remaining time of a timer by 1 minute
         private void OnDecreaseTimeClicked(object sender, EventArgs e)
         {
             var button = sender as Button;
@@ -25,6 +27,7 @@ namespace maui_capstone
             viewModel.DecreaseTime(timer, TimeSpan.FromMinutes(1));
         }
 
+        // Method to add a new timer with a default name and initial time
         private void OnAddTimerClicked(object sender, EventArgs e)
         {
             string timerName = "New Timer"; // You can replace this with a user input
@@ -32,6 +35,7 @@ namespace maui_capstone
             viewModel.AddTimer(timerName, initialTime);
         }
 
+        // Method to update the name of a timer with user input
         private async void OnUpdateTimerNameClicked(object sender, EventArgs e)
         {
             var button = sender as Button;
