@@ -5,7 +5,7 @@
     <StackLayout>
         <Label Text="Timer Creation page" />
         <Button Text="Add Timer" Clicked="OnAddTimerClicked" />
-        <ListView ItemsSource="{Binding ActiveTimers}">
+        <ListView ItemsSource="{Binding ActiveTimers}"> <!-- Bind to ActiveTimers -->
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

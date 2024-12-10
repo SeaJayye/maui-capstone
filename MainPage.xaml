@@ -14,36 +14,26 @@
 
         <!-- ScrollView to display timer containers. -->
         <ScrollView Grid.Row="0" BackgroundColor="{StaticResource White}">
-            <Grid BackgroundColor="{StaticResource White}" ColumnSpacing="6" RowSpacing="20" HorizontalOptions="FillAndExpand">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="5*"/>
-                </Grid.ColumnDefinitions>
-
-                <VerticalStackLayout Grid.Column="0">
-                    <Frame BackgroundColor="{StaticResource Primary}" HasShadow="True" CornerRadius="25" Margin="20" HeightRequest="230" WidthRequest="140" BorderColor="{StaticResource SecondaryLight}" HorizontalOptions="Center">
-                        <Grid>
-                            <!-- Circular Progress -->
-                            <Ellipse StrokeThickness="10" Stroke="{StaticResource Secondary}" Fill="Transparent"/>
-                            <!-- Timer Name -->
-                            <Label Text="{Binding TimerName}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="18" TextColor="{StaticResource SecondaryLight}"/>
-                        </Grid>
-                    </Frame>
-                    <Frame BackgroundColor="{StaticResource Primary}" HasShadow="True" CornerRadius="25" Margin="20" HeightRequest="230" WidthRequest="140" BorderColor="{StaticResource SecondaryLight}" HorizontalOptions="Center">
-                        <Label Text="Is probably a timer"/>
-                    </Frame>
-                </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Column="1">
-                    <Frame BackgroundColor="{StaticResource Primary}" HasShadow="True" CornerRadius="25" Margin="20" HeightRequest="230" WidthRequest="140" BorderColor="{StaticResource SecondaryLight}" HorizontalOptions="Center">
-                        <Label Text="Might not be a timer"/>
-                    </Frame>
-                    <Frame BackgroundColor="{StaticResource Primary}" HasShadow="True" CornerRadius="25" Margin="20" HeightRequest="230" WidthRequest="140" BorderColor="{StaticResource SecondaryLight}" HorizontalOptions="Center">
-                        <Label Text="Definitely isnt a timer"/>
-                    </Frame>
-                    
-                </VerticalStackLayout>
-            </Grid>
+            <StackLayout x:Name="TimerContainer" BackgroundColor="{StaticResource White}" Spacing="20" HorizontalOptions="FillAndExpand">
+                <!-- Existing Frames -->
+                <Frame BackgroundColor="{StaticResource Primary}" HasShadow="True" CornerRadius="25" Margin="20" HeightRequest="230" WidthRequest="140" BorderColor="{StaticResource SecondaryLight}" HorizontalOptions="Center">
+                    <Grid>
+                        <!-- Circular Progress -->
+                        <Ellipse StrokeThickness="10" Stroke="{StaticResource Secondary}" Fill="Transparent"/>
+                        <!-- Timer Name -->
+                        <Label Text="{Binding TimerName}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="18" TextColor="Black"/>
+                    </Grid>
+                </Frame>
+                <Frame BackgroundColor="{StaticResource Primary}" HasShadow="True" CornerRadius="25" Margin="20" HeightRequest="230" WidthRequest="140" BorderColor="{StaticResource SecondaryLight}" HorizontalOptions="Center">
+                    <Label Text="Is probably a timer"/>
+                </Frame>
+                <Frame BackgroundColor="{StaticResource Primary}" HasShadow="True" CornerRadius="25" Margin="20" HeightRequest="230" WidthRequest="140" BorderColor="{StaticResource SecondaryLight}" HorizontalOptions="Center">
+                    <Label Text="Might not be a timer"/>
+                </Frame>
+                <Frame BackgroundColor="{StaticResource Primary}" HasShadow="True" CornerRadius="25" Margin="20" HeightRequest="230" WidthRequest="140" BorderColor="{StaticResource SecondaryLight}" HorizontalOptions="Center">
+                    <Label Text="Definitely isnt a timer"/>
+                </Frame>
+            </StackLayout>
         </ScrollView>
 
         <Frame HasShadow="True" Grid.Row="1" CornerRadius="0" BackgroundColor="{StaticResource PrimaryLight}">
@@ -57,7 +47,7 @@
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <Frame BackgroundColor="{StaticResource SecondaryLight}" CornerRadius="10" Padding="10" Margin="5">
-                                        <Label Text="{Binding TimerName}" FontSize="16" TextColor="{StaticResource Secondary}" />
+                                        <Label Text="{Binding TimerName}" FontSize="16" TextColor="Black" />
                                     </Frame>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>

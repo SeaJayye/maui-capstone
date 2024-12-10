@@ -2,13 +2,13 @@ namespace maui_capstone
 {
     public partial class TimerCreate : ContentPage
     {
-        private TimersViewModel viewModel;
+        private TimersViewModel viewModel; // Added viewModel field
 
         public TimerCreate()
         {
             InitializeComponent();
-            viewModel = new TimersViewModel();
-            BindingContext = viewModel;
+            viewModel = ((App)Application.Current).TimersViewModel; // Updated to use shared TimersViewModel instance
+            BindingContext = viewModel; // Set BindingContext to viewModel
         }
 
         // Method to increase the remaining time of a timer by 1 minute
