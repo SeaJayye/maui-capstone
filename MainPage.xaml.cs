@@ -44,6 +44,19 @@ namespace maui_capstone
 
         private Frame CreateTimerFrame(TimerModel timer)
         {
+            var frame = new Frame
+            {
+                BackgroundColor = (Color)Application.Current.Resources["Primary"],
+                HasShadow = true,
+                CornerRadius = 25,
+                Margin = new Thickness(20),
+                HeightRequest = 230,
+                WidthRequest = 140,
+                BorderColor = (Color)Application.Current.Resources["SecondaryLight"],
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.End
+            };
+
             var nameLabel = new Label
             {
                 HorizontalTextAlignment = TextAlignment.Center,
@@ -71,32 +84,25 @@ namespace maui_capstone
                 FontAttributes = FontAttributes.Bold,
                 Margin = new Thickness(0, 10, 0, 0)
             };
-            startButton.Clicked += (sender, e) => StartTimer(timer);
+            startButton.Clicked += (sender, e) =>
+            {
+                StartTimer(timer, startButton);
+            };
 
             var stackLayout = new StackLayout
             {
                 Children = { nameLabel, timeLabel, startButton }
             };
 
-            return new Frame
-            {
-                BackgroundColor = (Color)Application.Current.Resources["Primary"],
-                HasShadow = true,
-                CornerRadius = 25,
-                Margin = new Thickness(20),
-                HeightRequest = 230,
-                WidthRequest = 140,
-                BorderColor = (Color)Application.Current.Resources["SecondaryLight"],
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.End,
-                Content = stackLayout
-            };
+            frame.Content = stackLayout;
+
+            return frame;
         }
 
-        private void StartTimer(TimerModel timer)
+        private void StartTimer(TimerModel timer, Button startButton)
         {
-            var timerInstance = new System.Timers.Timer(1000);
-            timerInstance.Elapsed += (sender, e) =>
+            timer.TimerInstance = new System.Timers.Timer(1000);
+            ((System.Timers.Timer)timer.TimerInstance).Elapsed += (sender, e) =>
             {
                 if (timer.RemainingTime > TimeSpan.Zero)
                 {
@@ -104,17 +110,28 @@ namespace maui_capstone
                 }
                 else
                 {
-                    timerInstance.Stop();
+                    ((System.Timers.Timer)timer.TimerInstance).Stop();
                 }
             };
-            timerInstance.Start();
+            ((System.Timers.Timer)timer.TimerInstance).Start();
+            startButton.IsEnabled = false; // Disable the button after it is pressed
+        }
+
+        private void PauseTimer(TimerModel timer)
+        {
+            ((System.Timers.Timer)timer.TimerInstance)?.Stop();
         }
 
         private void StartAllTimers(object sender, EventArgs e)
         {
             foreach (var timer in viewModel.ActiveTimers)
             {
-                StartTimer(timer);
+                var frame = CreateTimerFrame(timer);
+                var startButton = frame.Content.FindByName<Button>("startButton");
+                if (startButton != null && startButton.IsEnabled)
+                {
+                    StartTimer(timer, startButton);
+                }
             }
         }
 
