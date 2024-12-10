@@ -18,6 +18,8 @@
     - Have multiple timers running at the same time for different dishes
     
     - Active timers are displayed and has a scrollable layout
+
+    - Has synchronous timers so everything will end at the same time
 - **Two-Page App layout**:
 
     - Main page is for viewing all the active timers
