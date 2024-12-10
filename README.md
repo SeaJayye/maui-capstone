@@ -14,8 +14,11 @@
 
 ### Core Functionalities of this program
 - **Multi-Timer Support**:
-    -Have multiple timers running at the same time for different dishes
+
+    - Have multiple timers running at the same time for different dishes
     
+    - Active timers are displayed and have a scollable layout
+
 
 ## Development Stack
 
