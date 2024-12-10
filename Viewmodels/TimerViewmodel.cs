@@ -8,19 +8,61 @@ public class TimersViewModel
 
     public TimersViewModel()
     {
-        // Sample data
-        ActiveTimers = new ObservableCollection<TimerModel>
+        ActiveTimers = new ObservableCollection<TimerModel>();
+    }
+
+    public void IncreaseTime(TimerModel timer, TimeSpan amount)
+    {
+        timer.RemainingTime += amount;
+    }
+
+    public void DecreaseTime(TimerModel timer, TimeSpan amount)
+    {
+        if (timer.RemainingTime > amount)
         {
-            new TimerModel { TimerName = "Timer 1", RemainingTime = TimeSpan.FromMinutes(10) },
-            new TimerModel { TimerName = "Timer 2", RemainingTime = TimeSpan.FromMinutes(25) },
-            new TimerModel { TimerName = "Timer 3", RemainingTime = TimeSpan.FromMinutes(5) }
-        };
+            timer.RemainingTime -= amount;
+        }
+        else
+        {
+            timer.RemainingTime = TimeSpan.Zero;
+        }
+    }
+
+    public void AddTimer(string timerName, TimeSpan initialTime)
+    {
+        ActiveTimers.Add(new TimerModel { TimerName = timerName, RemainingTime = initialTime });
     }
 }
 
-public class TimerModel
+public class TimerModel : INotifyPropertyChanged
 {
-    public string TimerName { get; set; }
-    public TimeSpan RemainingTime { get; set; }
+    private string timerName;
+    private TimeSpan remainingTime;
 
+    public string TimerName
+    {
+        get => timerName;
+        set
+        {
+            timerName = value;
+            OnPropertyChanged(nameof(TimerName));
+        }
+    }
+
+    public TimeSpan RemainingTime
+    {
+        get => remainingTime;
+        set
+        {
+            remainingTime = value;
+            OnPropertyChanged(nameof(RemainingTime));
+        }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected virtual void OnPropertyChanged(string propertyName)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
 }

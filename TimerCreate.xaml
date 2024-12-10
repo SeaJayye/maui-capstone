@@ -4,5 +4,20 @@
              Title="Don't Burn It!">
     <StackLayout>
         <Label Text="Timer Creation page" />
+        <Button Text="Add Timer" Clicked="OnAddTimerClicked" />
+        <ListView ItemsSource="{Binding ActiveTimers}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Label Text="{Binding TimerName}" />
+                            <Label Text="{Binding RemainingTime, StringFormat='{}{0:hh\\:mm\\:ss}'}" />
+                            <Button Text="+" Clicked="OnIncreaseTimeClicked" />
+                            <Button Text="-" Clicked="OnDecreaseTimeClicked" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 </ContentPage>
