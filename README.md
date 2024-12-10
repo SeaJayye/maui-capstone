@@ -158,7 +158,6 @@
     - Text colors and fonts are defined in Styles.xaml
 
 
-## Screenshots
 
 
 
