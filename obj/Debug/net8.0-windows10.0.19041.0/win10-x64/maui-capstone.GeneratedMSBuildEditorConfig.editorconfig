@@ -48,3 +48,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = maui_capstone.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/SeaJay/source/repos/maui-capstone/TimerCreate.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = maui_capstone.TimerCreate.xaml
+build_metadata.AdditionalFiles.TargetPath = TimerCreate.xaml
+build_metadata.AdditionalFiles.RelativePath = TimerCreate.xaml

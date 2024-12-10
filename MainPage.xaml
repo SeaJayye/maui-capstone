@@ -2,41 +2,69 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="maui_capstone.MainPage"
-             Title="Home"
-             BackgroundColor="#F8F8F8">
+             Title="Don't Burn It!"
+             BackgroundColor="{StaticResource White}">
 
     <Grid>
         <!-- RowDefinitions to define the height of each row (half and half) -->
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>            
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!-- ScrollView to display timer containers. -->
-        <ScrollView Grid.Row="0">
-                <Grid>
-                    <!-- Grid Definitions to define the width of each column and row (Horz 50/50 and Vert auto) -->
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0" BackgroundColor="{StaticResource White}">
+            <Grid BackgroundColor="{StaticResource White}" ColumnSpacing="6" RowSpacing="20" HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
 
-                
-                </Grid>
+                <VerticalStackLayout Grid.Column="0">
+                    <Frame BackgroundColor="{StaticResource Primary}" HasShadow="True" CornerRadius="25" Margin="20" HeightRequest="230" WidthRequest="140" BorderColor="{StaticResource SecondaryLight}" HorizontalOptions="Center">
+                        <Grid>
+                            <!-- Circular Progress -->
+                            <Ellipse StrokeThickness="10" Stroke="{StaticResource Secondary}" Fill="Transparent"/>
+                            <!-- Timer Name -->
+                            <Label Text="{Binding TimerName}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="18" TextColor="{StaticResource SecondaryLight}"/>
+                        </Grid>
+                    </Frame>
+                    <Frame BackgroundColor="{StaticResource Primary}" HasShadow="True" CornerRadius="25" Margin="20" HeightRequest="230" WidthRequest="140" BorderColor="{StaticResource SecondaryLight}" HorizontalOptions="Center">
+                        <Label Text="Is probably a timer"/>
+                    </Frame>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1">
+                    <Frame BackgroundColor="{StaticResource Primary}" HasShadow="True" CornerRadius="25" Margin="20" HeightRequest="230" WidthRequest="140" BorderColor="{StaticResource SecondaryLight}" HorizontalOptions="Center">
+                        <Label Text="Might not be a timer"/>
+                    </Frame>
+                    <Frame BackgroundColor="{StaticResource Primary}" HasShadow="True" CornerRadius="25" Margin="20" HeightRequest="230" WidthRequest="140" BorderColor="{StaticResource SecondaryLight}" HorizontalOptions="Center">
+                        <Label Text="Definitely isnt a timer"/>
+                    </Frame>
+                    
+                </VerticalStackLayout>
+            </Grid>
         </ScrollView>
-        
-        <Grid Grid.Row="1">
-                <ScrollView>
+
+        <Frame HasShadow="True" Grid.Row="1" CornerRadius="0" BackgroundColor="{StaticResource PrimaryLight}">
+            <Grid>
+                <ScrollView VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
                     <VerticalStackLayout Padding="10">
-                        <Label Text="Whats cooking, chef?" HorizontalTextAlignment="Center" FontSize="24" FontAttributes="Bold" Margin="0,0,0,10"/>
-                        <Label Text="Active timers:" HorizontalTextAlignment="Center"/>
+                        <Label Text="Whats cooking, Chef ?" HorizontalTextAlignment="Center" FontSize="24" FontAttributes="Bold" Margin="0,0,0,10" TextColor="{StaticResource Secondary}"/>
+                        <Label Text="Active timers: 0" HorizontalTextAlignment="Center" FontSize="18" TextColor="{StaticResource SecondaryLight}" FontAttributes="Bold"/>
+                        <!-- Active Timer Queue -->
+                        <CollectionView ItemsSource="{Binding ActiveTimers}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Frame BackgroundColor="{StaticResource SecondaryLight}" CornerRadius="10" Padding="10" Margin="5">
+                                        <Label Text="{Binding TimerName}" FontSize="16" TextColor="{StaticResource Secondary}" />
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
                     </VerticalStackLayout>
                 </ScrollView>
-        </Grid>
+            </Grid>
+        </Frame>
     </Grid>
-        
 </ContentPage>

@@ -7,9 +7,8 @@
     Shell.FlyoutBehavior="Disabled"
     Title="maui_capstone">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    <TabBar>
+        <ShellContent Title="Home" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/>
+        <ShellContent Title="Create Timers" ContentTemplate="{DataTemplate local:TimerCreate}" Route="TimerCreate"/>
+    </TabBar>
 </Shell>
