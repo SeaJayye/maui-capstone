@@ -7,8 +7,6 @@
 4. [App Structure](#app-structure)
 5. [Usage Instruction](#usage-instruction)
 6. [UI Details](#ui-details)
-7. [Future possible upgrades](#future-possible-upgrades)
-8. [Screenshots](#screenshots)
 
 ## Features
 
@@ -159,9 +157,8 @@
     - Text colors and fonts are defined in Styles.xaml
 
 
-## Future possible upgrades
 
-## Screenshots
+
 
 
 
