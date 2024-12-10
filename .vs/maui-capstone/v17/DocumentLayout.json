@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|c:\\users\\seajay\\source\\repos\\maui-capstone\\viewmodels\\timerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|solutionrelative:viewmodels\\timerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|c:\\users\\seajay\\source\\repos\\maui-capstone\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|c:\\users\\seajay\\source\\repos\\maui-capstone\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|c:\\users\\seajay\\source\\repos\\maui-capstone\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|solutionrelative:appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|c:\\users\\seajay\\source\\repos\\maui-capstone\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|c:\\users\\seajay\\source\\repos\\maui-capstone\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,12 +23,20 @@
       "RelativeMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|solutionrelative:resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|c:\\users\\seajay\\source\\repos\\maui-capstone\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|c:\\users\\seajay\\source\\repos\\maui-capstone\\timercreate.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|solutionrelative:timercreate.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|c:\\users\\seajay\\source\\repos\\maui-capstone\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|solutionrelative:resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|c:\\users\\seajay\\source\\repos\\maui-capstone\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|c:\\users\\seajay\\source\\repos\\maui-capstone\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|solutionrelative:appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95FD0D2E-D822-4FB7-B471-17ACF1E1B006}|maui-capstone.csproj|c:\\users\\seajay\\source\\repos\\maui-capstone\\timercreate.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -42,8 +50,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TimerViewmodel.cs",
+              "DocumentMoniker": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\Viewmodels\\TimerViewmodel.cs",
+              "RelativeDocumentMoniker": "Viewmodels\\TimerViewmodel.cs",
+              "ToolTip": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\Viewmodels\\TimerViewmodel.cs",
+              "RelativeToolTip": "Viewmodels\\TimerViewmodel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T03:51:22.051Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
@@ -52,7 +73,7 @@
               "RelativeDocumentMoniker": "Resources\\Styles\\Styles.xaml",
               "ToolTip": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\Resources\\Styles\\Styles.xaml",
               "RelativeToolTip": "Resources\\Styles\\Styles.xaml",
-              "ViewState": "AgIAAHgBAAAAAAAAAAAwwKcBAACGAAAAAAAAAA==",
+              "ViewState": "AgIAAHgBAAAAAAAAAAAwwI0BAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-09T23:51:06.215Z",
               "EditorCaption": ""
@@ -72,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\AppShell.xaml",
               "RelativeDocumentMoniker": "AppShell.xaml",
@@ -80,12 +101,11 @@
               "RelativeToolTip": "AppShell.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-09T22:53:49.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T22:53:49.021Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "AppShell.xaml.cs",
@@ -93,51 +113,49 @@
               "RelativeToolTip": "AppShell.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T22:51:37.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T22:51:37.752Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\MainPage.xaml",
               "RelativeDocumentMoniker": "MainPage.xaml",
               "ToolTip": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\MainPage.xaml",
               "RelativeToolTip": "MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-09T22:42:07.187Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "MainPage.xaml.cs",
               "ToolTip": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\MainPage.xaml.cs",
               "RelativeToolTip": "MainPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T22:51:23.975Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "TimerCreate.xaml",
               "DocumentMoniker": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\TimerCreate.xaml",
               "RelativeDocumentMoniker": "TimerCreate.xaml",
               "ToolTip": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\TimerCreate.xaml",
               "RelativeToolTip": "TimerCreate.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-09T23:26:20.842Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T23:26:20.842Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "TimerCreate.xaml.cs",
               "DocumentMoniker": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\TimerCreate.xaml.cs",
               "RelativeDocumentMoniker": "TimerCreate.xaml.cs",
@@ -146,6 +164,19 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-09T23:26:10.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Colors.xaml",
+              "DocumentMoniker": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\Resources\\Styles\\Colors.xaml",
+              "RelativeDocumentMoniker": "Resources\\Styles\\Colors.xaml",
+              "ToolTip": "C:\\Users\\SeaJay\\source\\repos\\maui-capstone\\Resources\\Styles\\Colors.xaml",
+              "RelativeToolTip": "Resources\\Styles\\Colors.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T03:26:00.767Z",
               "EditorCaption": ""
             }
           ]
