@@ -1,24 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="maui_capstone.TimerCreate"
-             Title="Don't Burn It!">
-    <StackLayout>
-        <Label Text="Timer Creation page" />
-        <Button Text="Add Timer" Clicked="OnAddTimerClicked" />
-        <ListView ItemsSource="{Binding ActiveTimers}">
-            <ListView.ItemTemplate>
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="maui_capstone.TimerCreate"
+			 Title="Don't Burn It!"
+             BackgroundColor="{StaticResource White}">
+	
+	<StackLayout Margin="10" BackgroundColor="Transparent">
+		<Label Text="Timer Creation" FontAttributes="Bold" FontSize="24" HorizontalOptions="Center"/>
+		<Button Text="New Timer" Clicked="OnAddTimerClicked" BackgroundColor="{StaticResource Primary}" TextColor="{StaticResource PrimaryText}" FontAttributes="Bold" WidthRequest="300" Margin="20, 5, 20, 20" BorderColor="{StaticResource SecondaryLight}" BorderWidth="3" CornerRadius="18"/>
+		<ListView ItemsSource="{Binding ActiveTimers}" BackgroundColor="{StaticResource White}" Margin="10" HorizontalOptions="Center" VerticalScrollBarVisibility="Never" SeparatorColor="{StaticResource Secondary}" SeparatorVisibility="Default" RowHeight="50" VerticalOptions="Center" >
+			<ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal" Spacing="10">
-                            <Label Text="{Binding TimerName}" />
-                            <Label Text="{Binding RemainingTime, StringFormat='{}{0:hh\\:mm\\:ss}'}" />
-                            <Button Text="+" Clicked="OnIncreaseTimeClicked" />
-                            <Button Text="-" Clicked="OnDecreaseTimeClicked" />
-                            <Button Text="Update Name" Clicked="OnUpdateTimerNameClicked" />
+						<StackLayout VerticalOptions="Center">
+                            <Grid ColumnSpacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" Text="{Binding TimerName}" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                <Label Grid.Column="1" Text="{Binding RemainingTime, StringFormat='{}{0:hh\\:mm\\:ss}'}" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                <Button Grid.Column="2" Text="+" TextColor="{StaticResource PrimaryText}" FontAttributes="Bold" Clicked="OnIncreaseTimeClicked" HorizontalOptions="End" HeightRequest="36" WidthRequest="36" BorderColor="{StaticResource Secondary}" BorderWidth="2" BackgroundColor="{StaticResource SecondaryLight}"/>
+                                <Button Grid.Column="3" Text="-" TextColor="{StaticResource PrimaryText}" FontAttributes="Bold" Clicked="OnDecreaseTimeClicked" HorizontalOptions="End" HeightRequest="36" WidthRequest="36" BorderColor="{StaticResource Secondary}" BorderWidth="2" BackgroundColor="{StaticResource SecondaryLight}"/>
+                                <Button Grid.Column="4" Text="Rename" TextColor="{StaticResource PrimaryText}" FontAttributes="Bold" Clicked="OnUpdateTimerNameClicked" HorizontalOptions="End" HeightRequest="36" VerticalOptions="Center" BorderColor="{StaticResource Secondary}" BorderWidth="2" BackgroundColor="{StaticResource SecondaryLight}"/>
+                            </Grid>
                         </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
 </ContentPage>
