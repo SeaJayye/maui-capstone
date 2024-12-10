@@ -6,19 +6,63 @@ namespace maui_capstone
 {
     public partial class MainPage : ContentPage
     {
+        private TimersViewModel viewModel;
+
 
         public MainPage()
         {
             InitializeComponent();
+            viewModel = ((App)Application.Current).TimersViewModel; // Updated to use shared TimersViewModel instance
+            BindingContext = viewModel; // Set BindingContext to viewModel
+            viewModel.ActiveTimers.CollectionChanged += ActiveTimers_CollectionChanged; // Subscribe to CollectionChanged event
             Routing.RegisterRoute(nameof(TimerCreate), typeof(TimerCreate));
-            
         }
+
+        GlobalIndex index = new GlobalIndex();
+        private void ActiveTimers_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            foreach (var newItem in e.NewItems)
+            {
+                var timer = newItem as TimerModel;
+                var frame = CreateTimerFrame(timer);
+                if (index.count % 2 == 0) { TimerContainerEvens.Children.Add(frame); } // Add new frame to TimerContainerEvens
+                else { TimerContainerOdds.Children.Add(frame); } // Add new frame to TimerContainer
+                index.incr();
+            }
+        }
+
+        private Frame CreateTimerFrame(TimerModel timer)
+        {
+            var label = new Label
+            {
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                FontSize = 18,
+                FontAttributes = FontAttributes.Bold,
+                TextColor = (Color)Application.Current.Resources["SecondaryText"]
+            };
+            label.SetBinding(Label.TextProperty, new Binding("TimerName", source: timer));
+
+
+            return new Frame
+            {
+                BackgroundColor = (Color)Application.Current.Resources["Primary"],
+                HasShadow = true,
+                CornerRadius = 25,
+                Margin = new Thickness(20),
+                HeightRequest = 230,
+                WidthRequest = 140,
+                BorderColor = (Color)Application.Current.Resources["SecondaryLight"],
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.End,
+                Content = label
+            };
+        }
+
 
         private async void NavToTimerCreation(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync(nameof(TimerCreate));
         }
-        
-    } 
-
+    }
 }

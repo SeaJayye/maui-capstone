@@ -1,9 +1,11 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
 using System.Timers;
 
 namespace maui_capstone
 {
+
     public partial class TimerCreate : ContentPage
     {
         private TimersViewModel viewModel;
@@ -11,7 +13,7 @@ namespace maui_capstone
         public TimerCreate()
         {
             InitializeComponent();
-            viewModel = new TimersViewModel();
+            viewModel = ((App)Application.Current).TimersViewModel;
             BindingContext = viewModel;
         }
 
@@ -29,9 +31,11 @@ namespace maui_capstone
             viewModel.DecreaseTime(timer, TimeSpan.FromMinutes(1));
         }
 
+        GlobalIndex count = new GlobalIndex();
         private void OnAddTimerClicked(object sender, EventArgs e)
         {
-            string timerName = "New Timer"; // You can replace this with a user input
+            count.incr();
+            string timerName = "Timer " + (count.count).ToString(); // You can replace this with a user input
             TimeSpan initialTime = TimeSpan.FromMinutes(10); // You can replace this with a user input
             viewModel.AddTimer(timerName, initialTime);
         }
@@ -46,5 +50,17 @@ namespace maui_capstone
                 viewModel.UpdateTimerName(timer, newName);
             }
         }
+    }
+
+    public class GlobalIndex
+    {
+        public GlobalIndex() { count = 0; }
+        public int count {  get; set; }
+
+        public void incr()
+        {
+            count++;
+        }
+
     }
 }
