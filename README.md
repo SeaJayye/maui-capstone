@@ -7,7 +7,6 @@
 4. [App Structure](#app-structure)
 5. [Usage Instruction](#usage-instruction)
 6. [UI Details](#ui-details)
-7. [Screenshots](#screenshots)
 
 ## Features
 
