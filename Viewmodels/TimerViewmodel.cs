@@ -64,6 +64,8 @@ public class TimerModel : INotifyPropertyChanged
         }
     }
 
+    public System.Timers.Timer TimerInstance { get; internal set; }
+
     public event PropertyChangedEventHandler PropertyChanged;
 
     protected virtual void OnPropertyChanged(string propertyName)

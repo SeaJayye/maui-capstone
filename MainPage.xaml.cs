@@ -16,6 +16,17 @@ namespace maui_capstone
             BindingContext = viewModel; // Set BindingContext to viewModel
             viewModel.ActiveTimers.CollectionChanged += ActiveTimers_CollectionChanged; // Subscribe to CollectionChanged event
             Routing.RegisterRoute(nameof(TimerCreate), typeof(TimerCreate));
+
+            var startAllButton = new Button
+            {
+                Text = "Start All Timers",
+                BackgroundColor = (Color)Application.Current.Resources["Primary"],
+                TextColor = (Color)Application.Current.Resources["PrimaryText"],
+                FontAttributes = FontAttributes.Bold,
+                Margin = new Thickness(0, 10, 0, 0)
+            };
+            startAllButton.Clicked += StartAllTimers;
+            // Add startAllButton to the page layout
         }
 
         GlobalIndex index = new GlobalIndex();
@@ -33,18 +44,7 @@ namespace maui_capstone
 
         private Frame CreateTimerFrame(TimerModel timer)
         {
-            var label = new Label
-            {
-                HorizontalTextAlignment = TextAlignment.Center,
-                VerticalTextAlignment = TextAlignment.Center,
-                FontSize = 18,
-                FontAttributes = FontAttributes.Bold,
-                TextColor = (Color)Application.Current.Resources["SecondaryText"]
-            };
-            label.SetBinding(Label.TextProperty, new Binding("TimerName", source: timer));
-
-
-            return new Frame
+            var frame = new Frame
             {
                 BackgroundColor = (Color)Application.Current.Resources["Primary"],
                 HasShadow = true,
@@ -54,11 +54,86 @@ namespace maui_capstone
                 WidthRequest = 140,
                 BorderColor = (Color)Application.Current.Resources["SecondaryLight"],
                 HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.End,
-                Content = label
+                VerticalOptions = LayoutOptions.End
             };
+
+            var nameLabel = new Label
+            {
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                FontSize = 18,
+                FontAttributes = FontAttributes.Bold,
+                TextColor = (Color)Application.Current.Resources["SecondaryText"]
+            };
+            nameLabel.SetBinding(Label.TextProperty, new Binding("TimerName", source: timer));
+
+            var timeLabel = new Label
+            {
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                FontSize = 16,
+                TextColor = (Color)Application.Current.Resources["SecondaryText"]
+            };
+            timeLabel.SetBinding(Label.TextProperty, new Binding("RemainingTime", stringFormat: "{0:hh\\:mm\\:ss}", source: timer));
+
+            var startButton = new Button
+            {
+                Text = "Start Timer",
+                BackgroundColor = (Color)Application.Current.Resources["Primary"],
+                TextColor = (Color)Application.Current.Resources["PrimaryText"],
+                FontAttributes = FontAttributes.Bold,
+                Margin = new Thickness(0, 10, 0, 0)
+            };
+            startButton.Clicked += (sender, e) =>
+            {
+                StartTimer(timer, startButton);
+            };
+
+            var stackLayout = new StackLayout
+            {
+                Children = { nameLabel, timeLabel, startButton }
+            };
+
+            frame.Content = stackLayout;
+
+            return frame;
         }
 
+        private void StartTimer(TimerModel timer, Button startButton)
+        {
+            timer.TimerInstance = new System.Timers.Timer(1000);
+            ((System.Timers.Timer)timer.TimerInstance).Elapsed += (sender, e) =>
+            {
+                if (timer.RemainingTime > TimeSpan.Zero)
+                {
+                    timer.RemainingTime = timer.RemainingTime.Subtract(TimeSpan.FromSeconds(1));
+                }
+                else
+                {
+                    ((System.Timers.Timer)timer.TimerInstance).Stop();
+                }
+            };
+            ((System.Timers.Timer)timer.TimerInstance).Start();
+            startButton.IsEnabled = false; // Disable the button after it is pressed
+        }
+
+        private void PauseTimer(TimerModel timer)
+        {
+            ((System.Timers.Timer)timer.TimerInstance)?.Stop();
+        }
+
+        private void StartAllTimers(object sender, EventArgs e)
+        {
+            foreach (var timer in viewModel.ActiveTimers)
+            {
+                var frame = CreateTimerFrame(timer);
+                var startButton = frame.Content.FindByName<Button>("startButton");
+                if (startButton != null && startButton.IsEnabled)
+                {
+                    StartTimer(timer, startButton);
+                }
+            }
+        }
 
         private async void NavToTimerCreation(object sender, EventArgs e)
         {

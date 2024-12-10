@@ -1,1 +1,1 @@
-C:\Users\SeaJay\source\repos\maui-capstone\maui-capstone.csproj;x64
+C:\Programming and logic\Github stuff\maui-capstone\maui-capstone.csproj;x64
