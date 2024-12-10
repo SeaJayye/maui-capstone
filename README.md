@@ -8,7 +8,8 @@
 5. [Usage Instruction](#usage-instruction)
 6. [UI Details](#ui-details)
 
-## Features
+## Documentation
+[Mobile App Capstone.pdf](https://github.com/user-attachments/files/18078314/Mobile.App.Capstone.pdf)
 
 ### Core Functionalities of this program
 
