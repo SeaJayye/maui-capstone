@@ -59,6 +59,15 @@
 
 ## Installation and Setup
 
+### Prerequisites
+    - Visual Studio 2022 or later with .NET MAUI installed
+    - Android emulator or other testing device
+    - .NET 6 SDK or higher
+
+### Steps to Install
+
+
+
 ## App Structure
 
 ## Usage Instruction
