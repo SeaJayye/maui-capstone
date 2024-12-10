@@ -13,20 +13,49 @@
 ## Features
 
 ### Core Functionalities of this program
+
 - **Multi-Timer Support**:
 
     - Have multiple timers running at the same time for different dishes
     
-    - Active timers are displayed and have a scollable layout
+    - Active timers are displayed and has a scrollable layout
+
+    - Has synchronous timers so everything will end at the same time
+
 - **Two-Page App layout**:
 
     - Main page is for viewing all the active timers
+
     - Timer detail page is the page for detailed timer information
+
+- **Responsive Design**:
+
+    - Adapts to varying screen sizes using grids and stack layouts
+
+    - Optimized for both portrait and landscape orientations
+
+- **Customizable themes and fonts**:
+
+    - Uses a cohesive color palette from "Styles.xaml" and "Colors.xaml"
+
+    - Includes different fonts for a more moderns and professional look
+
+- **Clean Navigation**:
+
+    - Built to have a smooth navigation with room for future scalability
 
 
 
 
 ## Development Stack
+
+1. **.NET MAUI**: A cross-platform framework for building apps
+2. **XAML**: XML-based language for defining user interfaces
+3. **C#**: Language of coding, handles application logistics
+4. **Custom Resource Dictionaries**:
+    
+    - *Colors.xaml* is for defining a consisten color palette
+    - *Styles.xaml* for reusable styles and formatting across the app 
 
 ## Installation and Setup
 
