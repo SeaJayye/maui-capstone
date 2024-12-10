@@ -10,6 +10,8 @@
 7. [Future possible upgrades](#future-possible-upgrades)
 8. [Screenshots](#screenshots)
 
+## Features
+
 ## Development Stack
 
 ## Installation and Setup
