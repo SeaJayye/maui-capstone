@@ -136,6 +136,29 @@
 
 ## UI Details
 
+1. Grid-Based Layout:
+
+    - Rows split evenly for a balanced design
+
+    - Ensure timers are displayed side by side for visibility
+
+2. ScrollView Integration
+
+    - Ensures that all timers can be viewed easily
+
+3. 
+
+    - Headers use bold large fonts to grab attention
+
+    - Active timer labels are centered for readability
+
+4. Colors and Themes
+
+    - Background color: White for a clean interface
+
+    - Text colors and fonts are defined in Styles.xaml
+
+
 ## Future possible upgrades
 
 ## Screenshots
