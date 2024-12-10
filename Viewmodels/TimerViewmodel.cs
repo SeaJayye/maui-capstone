@@ -14,6 +14,7 @@ public class TimersViewModel
     public void IncreaseTime(TimerModel timer, TimeSpan amount)
     {
         timer.RemainingTime += amount;
+        timer.OriginalDuration += amount;
     }
 
     public void DecreaseTime(TimerModel timer, TimeSpan amount)
@@ -21,16 +22,18 @@ public class TimersViewModel
         if (timer.RemainingTime > amount)
         {
             timer.RemainingTime -= amount;
+            timer.OriginalDuration -= amount;
         }
         else
         {
             timer.RemainingTime = TimeSpan.Zero;
+            timer.OriginalDuration = TimeSpan.Zero;
         }
     }
 
     public void AddTimer(string timerName, TimeSpan initialTime)
     {
-        ActiveTimers.Add(new TimerModel { TimerName = timerName, RemainingTime = initialTime });
+        ActiveTimers.Add(new TimerModel { TimerName = timerName, RemainingTime = initialTime, OriginalDuration = initialTime});
     }
 
     public void UpdateTimerName(TimerModel timer, string newName)
@@ -43,6 +46,18 @@ public class TimerModel : INotifyPropertyChanged
 {
     private string timerName;
     private TimeSpan remainingTime;
+
+    private TimeSpan originalDuration;
+
+    public TimeSpan OriginalDuration
+    {
+        get => originalDuration;
+        set
+        {
+            originalDuration = value;
+            OnPropertyChanged(nameof(OriginalDuration));
+        }
+    }
 
     public string TimerName
     {

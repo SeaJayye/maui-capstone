@@ -13,15 +13,17 @@
 		</Grid.RowDefinitions>
 
 		<!-- ScrollView to display timer containers. -->
-		<ScrollView Grid.Row="0" BackgroundColor="{StaticResource White}">
+        <ScrollView Grid.Row="0" BackgroundColor="{StaticResource White}">
             <StackLayout>
-				<Grid BackgroundColor="{StaticResource White}" ColumnSpacing="6" RowSpacing="20" HorizontalOptions="FillAndExpand">
+                <Button x:Name="startButton" Margin="10, 10, 10, 0" Text="Start All"  Grid.ColumnSpan="2" BackgroundColor="{StaticResource SecondaryLight}" BorderColor="{StaticResource Secondary}" BorderWidth="2" Clicked="StartAllTimers" HorizontalOptions="Center" VerticalOptions="Center"/>
+				<Grid BackgroundColor="{StaticResource White}" ColumnSpacing="6" RowSpacing="1" HorizontalOptions="FillAndExpand">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="5*"/>
 						<ColumnDefinition Width="5*"/>
 					</Grid.ColumnDefinitions>
+                    
 
-					<VerticalStackLayout Grid.Column="0" x:Name="TimerContainerEvens">
+                    <VerticalStackLayout Grid.Column="0" x:Name="TimerContainerEvens">
                         <!-- Left  side container, will populate with all new timers -->
 					</VerticalStackLayout>
 
