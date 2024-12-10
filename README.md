@@ -13,6 +13,7 @@
 ## Features
 
 ### Core Functionalities of this program
+
 - **Multi-Timer Support**:
 
     - Have multiple timers running at the same time for different dishes
@@ -32,6 +33,16 @@
     - Adapts to varying screen sizes using grids and stack layouts
 
     - Optimized for both portrait and landscape orientations
+
+- **Customizable themes and fonts**:
+
+    - Uses a cohesive color palette from "Styles.xaml" and "Colors.xaml"
+
+    - Includes different fonts for a more moderns and professional look
+
+- **Clean Navigation**:
+
+    - Built to have a smooth navigation with room for future scalability
 
 
 
