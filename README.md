@@ -44,9 +44,6 @@
 
     - Built to have a smooth navigation with room for future scalability
 
-
-
-
 ## Development Stack
 
 1. **.NET MAUI**: A cross-platform framework for building apps
@@ -76,9 +73,21 @@
         -dotnet build
         -dotnet run
 
-
-
 ## App Structure
+
+1. *App.xaml*:
+    - Declares application-wide resources like styles and colors
+    - Combines dictionaries (Colors.xaml and Styles.xaml) for easy maintenance
+2. *AppShell.xaml*:
+    - Configures the apps navigation structure
+    - Ensures clean and minimal navigation
+3. *MainPage.xaml*:
+    - Implements the primary user interface for viewing and interacting with timers
+    - Uses a grid based layout for displaying timers 
+4. *MauiProgram.cs*:
+    - Handles app initializations, including fonts, styles and debugging
+5. *Resources/Styles/Colors.xaml and Styles.xaml*:
+    - Defines visual properties for a consisten and professional appearence
 
 ## Usage Instruction
 
