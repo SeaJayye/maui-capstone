@@ -81,6 +81,9 @@ namespace maui_capstone
                 Text = "Start Timer",
                 BackgroundColor = (Color)Application.Current.Resources["Primary"],
                 TextColor = (Color)Application.Current.Resources["PrimaryText"],
+                BorderColor= (Color)Application.Current.Resources["Secondary"],
+                BorderWidth= 2,
+                CornerRadius= 15,
                 FontAttributes = FontAttributes.Bold,
                 Margin = new Thickness(0, 10, 0, 0)
             };
@@ -101,20 +104,21 @@ namespace maui_capstone
 
         private void StartTimer(TimerModel timer, Button startButton)
         {
-            timer.TimerInstance = new System.Timers.Timer(1000);
-            ((System.Timers.Timer)timer.TimerInstance).Elapsed += (sender, e) =>
-            {
-                if (timer.RemainingTime > TimeSpan.Zero)
+            if (timer.OriginalDuration.TotalMinutes == timer.RemainingTime.TotalMinutes) {
+                timer.TimerInstance = new System.Timers.Timer(1000);
+                ((System.Timers.Timer)timer.TimerInstance).Elapsed += (sender, e) =>
                 {
-                    timer.RemainingTime = timer.RemainingTime.Subtract(TimeSpan.FromSeconds(1));
-                }
-                else
-                {
-                    ((System.Timers.Timer)timer.TimerInstance).Stop();
-                }
-            };
-            ((System.Timers.Timer)timer.TimerInstance).Start();
-            startButton.IsEnabled = false; // Disable the button after it is pressed
+                    if (timer.RemainingTime > TimeSpan.Zero)
+                    {
+                        timer.RemainingTime = timer.RemainingTime.Subtract(TimeSpan.FromSeconds(1));
+                    }
+                    else
+                    {
+                        ((System.Timers.Timer)timer.TimerInstance).Stop();
+                    }
+                };
+                ((System.Timers.Timer)timer.TimerInstance).Start();
+            }
         }
 
         private void PauseTimer(TimerModel timer)
@@ -126,13 +130,21 @@ namespace maui_capstone
         {
             foreach (var timer in viewModel.ActiveTimers)
             {
-                var frame = CreateTimerFrame(timer);
-                var startButton = frame.Content.FindByName<Button>("startButton");
-                if (startButton != null && startButton.IsEnabled)
-                {
+                    var frame = CreateTimerFrame(timer);
                     StartTimer(timer, startButton);
-                }
             }
+        }
+
+        private string TimerCount(object sender, EventArgs e)
+        {
+            int index = 0;
+            foreach (var timer in viewModel.ActiveTimers)
+            {
+                index++;
+            }
+
+            string returnMessage = "Timer Count: " + index.ToString();
+            return returnMessage;
         }
 
         private async void NavToTimerCreation(object sender, EventArgs e)
