@@ -9,7 +9,8 @@
 6. [UI Details](#ui-details)
 
 ## Documentation
-[Mobile App Capstone.pdf](https://github.com/user-attachments/files/18078314/Mobile.App.Capstone.pdf)
+[Dont Burn It Doc.pdf](https://github.com/user-attachments/files/18089782/Dont.Burn.It.Doc.pdf)
+
 
 ### Core Functionalities of this program
 
